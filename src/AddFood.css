@@ -2,5 +2,8 @@
   width: 350px;
   display: flex;
   justify-content: space-between;
-  border: black solid 1px;
 }
+
+/* .add-recipe, .add-combo {
+  font-size: 20px;
+} */

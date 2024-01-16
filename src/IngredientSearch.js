@@ -1,6 +1,6 @@
 import { ingredients } from "./Data"
 import './IngredientSearch.css'
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react'
 
 export default function InputSearch() {
 
@@ -14,12 +14,10 @@ export default function InputSearch() {
 
   const handleInputChange = (e) => {
     setInputData(e.target.value.toLowerCase())
-    console.log('second input', inputData)
   };
   
   const handleIngredientInputChange = (e) => {
     setIngredientInputData(e.target.value)
-    console.log('list', ingredientDisplay)
   }
 
   const testDisplay = newIngredients.filter((ingred) => inputData.length && ingred.includes(inputData)
