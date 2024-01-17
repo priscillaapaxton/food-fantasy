@@ -8,9 +8,10 @@ import reportWebVitals from './reportWebVitals';
 import Widgets from './widgets';
 
 import AddFood from './AddFood';
+import Browse from './Browse';
 import FavoriteIngredients from './FavoriteIngredients';
 import Trending from './Trending';
-import FavoriteRecipes from './FavoriteRecipes';
+import FavoriteRecipes from './Browse';
 import RecipeSearch from './RecipeSearch';
 import InputSearch from './IngredientSearch';
 
@@ -30,11 +31,10 @@ const router = createBrowserRouter([
         path: '/AddFood',
         element: <AddFood />,
       },
-      // {
-      //   path: '/FavoriteIngredients',
-      //   element: <FavoriteIngredients ingredients={ingredients}/>,
-
-      // },
+      {
+        path: '/Browse',
+        element: <Browse recipes={recipes}/>,
+      },
       // {
       //   path: '/Trending',
       //   element: <Trending />
