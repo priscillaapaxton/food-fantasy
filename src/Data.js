@@ -125,6 +125,103 @@ export const recipes = [
   { recipeName: 'Tuna Salad Wrap', ingredients: ['Tuna', 'Mayonnaise', 'Celery', 'Lettuce', 'Tomatoes', 'Tortilla'] }
 ];
 
+// YYYY-MM-DDTHH:mm:ss.sssZ
+// YYYY: Four-digit year
+// MM: Two-digit month (01 for January, 02 for February, and so on)
+// DD: Two-digit day of the month
+// T: Separator indicating the start of the time portion
+// HH: Two-digit hour (00 through 23)
+// mm: Two-digit minute (00 through 59)
+// ss: Two-digit second (00 through 59)
+// sss: Three-digit milliseconds
+// Z: Indicates the time is in UTC (Coordinated Universal Time)
+// ex: 2024-01-27T15:30:45.000Z
+
+
+export const newRecipes = [
+  {
+    recipeId: 1,
+    recipeCreator: 101,
+    dateCreated: '2021-12-12',
+    recipeName: "Spaghetti Bolognese",
+    recipeLikes: 0,
+    recipeSaves: 0,
+    recipeCooked: 0,
+    recipeCategory: "Pasta",
+    recipeIngredients: [
+      { ingredientName: "Spaghetti", ingredientQuantity: "200g" },
+      { ingredientName: "Ground Beef", ingredientQuantity: "500g" },
+    ],
+    recipeInstructions: "Cook spaghetti, brown ground beef, mix together, and serve!",
+    recipeImage: ""
+  },
+  {
+    recipeId: 2,
+    recipeCreator: 102,
+    dateCreated: '2021-08-12',
+    recipeName: "Chicken Caesar Salad",
+    recipeLikes: 0,
+    recipeSaves: 0,
+    recipeCooked: 0,
+    recipeCategory: "Salad",
+    recipeIngredients: [
+      { ingredientName: "Chicken Breast", ingredientQuantity: "300g" },
+      { ingredientName: "Romaine Lettuce", ingredientQuantity: "1 head" },
+    ],
+    recipeInstructions: "Grill chicken, chop lettuce, mix with Caesar dressing, and enjoy!",
+    recipeImage: ""
+  },
+  {
+    recipeId: 3,
+    recipeCreator: 103,
+    dateCreated: '2021-04-25',
+    recipeName: "Vegetarian Pizza",
+    recipeLikes: 0,
+    recipeSaves: 0,
+    recipeCooked: 0,
+    recipeCategory: "Pizza",
+    recipeIngredients: [
+      { ingredientName: "Pizza Dough", ingredientQuantity: "1 ball" },
+      { ingredientName: "Tomatoes", ingredientQuantity: "4 medium" },
+    ],
+    recipeInstructions: "Roll out dough, add toppings, bake until crust is golden brown.",
+    recipeImage: ""
+  },
+  {
+    recipeId: 4,
+    recipeCreator: 104,
+    dateCreated: '2021-10-12',
+    recipeName: "Chocolate Chip Cookies",
+    recipeLikes: 0,
+    recipeSaves: 0,
+    recipeCooked: 0,
+    recipeCategory: "Dessert",
+    recipeIngredients: [
+      { ingredientName: "All-Purpose Flour", ingredientQuantity: "2 cups" },
+      { ingredientName: "Chocolate Chips", ingredientQuantity: "1 cup" },
+    ],
+    recipeInstructions: "Mix ingredients, form cookies, bake at 350°F for 10-12 minutes.",
+    recipeImage: ""
+  },
+  {
+    recipeId: 5,
+    recipeCreator: 105,
+    dateCreated: '2021-02-12',
+    recipeName: "Vegetable Stir Fry",
+    recipeLikes: 0,
+    recipeSaves: 0,
+    recipeCooked: 0,
+    recipeCategory: "Stir Fry",
+    recipeIngredients: [
+      { ingredientName: "Broccoli", ingredientQuantity: "1 cup" },
+      { ingredientName: "Bell Peppers", ingredientQuantity: "2 cups" },
+    ],
+    recipeInstructions: "Stir-fry vegetables in a wok with your favorite sauce until tender.",
+    recipeImage: ""
+  },
+];
+
+
 export const combos = [
   { combinationId: 1, ingredients: ['Tomatoes', 'Mozzarella', 'Basil', 'Olive oil', 'Balsamic vinegar'] },
   { combinationId: 2, ingredients: ['Chicken', 'Lemon', 'Garlic', 'Thyme', 'Olive oil'] },

@@ -7,7 +7,7 @@ import {
 export default function Main() {
   return (
     <div className="App">
-      <Outlet />
+        <Outlet />
     </div>
   );
 }

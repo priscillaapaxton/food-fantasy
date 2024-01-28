@@ -1,21 +1,19 @@
-import React from 'react';
+import './index.css';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
-import './index.css';
-import Main from './Main';
 import reportWebVitals from './reportWebVitals';
 
+import Main from './Main';
 import Widgets from './widgets';
 
-import AddFood from './AddFood';
-import FavoriteIngredients from './FavoriteIngredients';
-import Trending from './Trending';
-import FavoriteRecipes from './FavoriteRecipes';
-import RecipeSearch from './RecipeSearch';
-import InputSearch from './IngredientSearch';
+import View from './View';
+
+import AddFood from './add a recipe/AddFood';
 
 import { ingredients, recipes, combos } from './Data';
 //test
+
 
 const router = createBrowserRouter([
   {
@@ -24,25 +22,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <><Widgets /><InputSearch /></>
+        element: <View />
       },
-      {
-        path: '/AddFood',
-        element: <AddFood />,
-      },
-      // {
-      //   path: '/FavoriteIngredients',
-      //   element: <FavoriteIngredients ingredients={ingredients}/>,
-
-      // },
-      // {
-      //   path: '/Trending',
-      //   element: <Trending />
-      // },
-      // {
-      //   path: '/FavoriteRecipes',
-      //   element: <FavoriteRecipes recipes={recipes}/>
-      // }
     ]
   }
 ])

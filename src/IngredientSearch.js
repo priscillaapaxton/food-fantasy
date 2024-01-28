@@ -2,37 +2,48 @@ import { ingredients } from "./Data"
 import './IngredientSearch.css'
 import React, { useState, useEffect } from 'react'
 
+import { recipes } from "./Data"
+
 export default function InputSearch() {
 
-  const newIngredients = ingredients.map((ingred) => {
-    return ingred.toLowerCase()
-  })
-
-  const [inputData, setInputData] = useState('')
   const [ingredientInputData, setIngredientInputData] = useState('')
   const [ingredientDisplay, setIngredientDisplay] = useState([])
-
-  const handleInputChange = (e) => {
-    setInputData(e.target.value.toLowerCase())
-  };
+  const [resultsToDisplay, setResults] = useState([])
   
   const handleIngredientInputChange = (e) => {
     setIngredientInputData(e.target.value)
   }
-
-  const testDisplay = newIngredients.filter((ingred) => inputData.length && ingred.includes(inputData)
-  //make it so if there is a value in the input that doesn't totall match, it will show the previous list that did.
-  )
 
   const handleRecipeSearchInput = () => {
     setIngredientDisplay([...ingredientDisplay, ingredientInputData])
     setIngredientInputData('')
   }
 
+  const results = recipes.filter((recipe) => {
+    return recipe.ingredients.some((ingredient) => {
+      return ingredientDisplay.includes(ingredient)
+    })
+  })
+
+  const getResults = () => {
+    setResults(results)
+    console.log(results)
+  }
+
+
+  // const includedIngredients = recipes.filter((recipe) => {
+  //   return recipe.ingredients.some((ingredient) => {
+  //     return given.includes(ingredient)
+  // })
+  // })
+
+  console.log('results', resultsToDisplay)
+  console.log('ingredient display', ingredientDisplay)
+
   return (
-    <div className='input-container'>
+    <div className='search-component-container'>
       <div className='search-container'>
-        <div className='recipe-search-container'>
+        <div className='ingredient-input-container'>
           <h3>Recipe Search</h3>
           <p>Enter Ingredients:</p>
           <input 
@@ -41,32 +52,22 @@ export default function InputSearch() {
             type='text' 
             name='input'
           />
-          <button 
-            // type='submit' 
-            onClick={handleRecipeSearchInput}
-            // value={ingredientInputData}
-          >
-          click
+          <button onClick={handleRecipeSearchInput}>
+          add ingredient
           </button>
+          <button onClick={getResults}>search</button>
         </div>
-        <div className='ingredient-search-container'>
-          <p>Ingredient Search</p>
-          <input 
-            onChange={handleInputChange} 
-            value={inputData} 
-            type='text' 
-            name='input' 
-          />
-          <div className='ingredient-display'>{testDisplay.map((ingred) => 
-            <p>{ingred}</p>
-          )}</div>
+        <div className='ingredient-input-display'>
+          {ingredientDisplay.map((ingredient) => 
+            <p>{ingredient}</p>
+          )}
         </div>
       </div>
-      <div className='ingredient-search-display'>
-        {ingredientDisplay.map((ingredient) => 
-          <p>{ingredient}</p>
+      {/* <div className='results-display-container'>
+        {results.map((result) => 
+          <div>{result}</div>
         )}
-      </div>
+      </div> */}
     </div>
   )
 }
