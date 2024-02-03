@@ -13,3 +13,12 @@
   height: 25px;
   width: 25px;
 }
+
+.current-component-container {
+  border: solid black 1px;
+  height: 300px;
+}
+
+.button-container {
+  
+}

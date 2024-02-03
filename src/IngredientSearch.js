@@ -37,8 +37,6 @@ export default function InputSearch() {
   // })
   // })
 
-  console.log('results', resultsToDisplay)
-  console.log('ingredient display', ingredientDisplay)
 
   return (
     <div className='search-component-container'>
