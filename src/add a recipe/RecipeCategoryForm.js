@@ -2,7 +2,7 @@ import './RecipeCategoryForm.css'
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
-export default function RecipeCategoryForm({ getRecipeCategory }) {
+export default function RecipeCategoryForm({ buildRecipe }) {
 
   const [selection, setSelection] = useState('')
 
@@ -11,7 +11,7 @@ export default function RecipeCategoryForm({ getRecipeCategory }) {
   }
 
   const setCategory = () => {
-    selection && getRecipeCategory(selection)
+    selection && buildRecipe('category', selection)
   }
 
   return (

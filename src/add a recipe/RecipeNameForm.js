@@ -2,7 +2,7 @@ import './RecipeNameForm.css'
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
-export default function RecipeNameForm({ getRecipeName }) {
+export default function RecipeNameForm({ buildRecipe }) {
 
   const [input, setInput] = useState('')
 
@@ -11,8 +11,9 @@ export default function RecipeNameForm({ getRecipeName }) {
   }
 
   const setName = () => {
-    getRecipeName(input)
+    buildRecipe('name', input)
   }
+  //why does this look weird?? should I replace the 'name' with something better?
 
   return (
     <div className='recipe-name-form'>

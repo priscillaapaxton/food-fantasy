@@ -6,63 +6,62 @@ import RecipeNameForm from './RecipeNameForm';
 import RecipeCategoryForm from './RecipeCategoryForm';
 import RecipeIngredientsForm from './RecipeIngredientsForm';
 import RecipeInstructionsForm from './RecipeInstructionsForm';
+import RecipeReview from './RecipeReview';
 
 export default function AddFood() {
 
   const [recipeStep, setRecipeStep] = useState(0);
   const [currentComponent, setCurrentComponent] = useState(<RecipeNameForm/>)
-  const [recipeName, setRecipeName] = useState('')
-  const [recipeCategory, setRecipeCategory] = useState('')
-  const [recipeIngredients, setRecipeIngredients] = useState([])
 
   //should this remain an object?
-  // const [recipe, setRecipe] = useState({
-  //   name: '',
-  //   category: '',
-  //   ingredients: [],
-  //   instructions: [],
-  // })
+  const [recipe, setRecipe] = useState({
+    name: '',
+    category: '',
+    ingredients: [],
+    instructions: [],
+  })
 
-  const getRecipeName = (input) => {
-    setRecipeName(input)
-  }
-
-  const getRecipeCategory = (input) => {
-    setRecipeCategory(input)
-  }
-
-  const getRecipeIngredients = (input) => {
-    setRecipeIngredients(input)
+  const buildRecipe = (name, input) => {
+    setRecipe({
+      ...recipe, 
+      [name]: input 
+    })
   }
 
  useEffect(() => {
   if (recipeStep === 0) {
-    setCurrentComponent(<RecipeNameForm getRecipeName={getRecipeName}/>)
+    setCurrentComponent(<RecipeNameForm 
+    buildRecipe={buildRecipe}
+    />)
   }
   else if (recipeStep === 1) {
-    setCurrentComponent(<RecipeCategoryForm getRecipeCategory={getRecipeCategory}/>)
+    setCurrentComponent(<RecipeCategoryForm 
+    buildRecipe={buildRecipe}/>)
   }
   else if (recipeStep === 2) {
-    setCurrentComponent(<RecipeIngredientsForm getRecipeIngredients={getRecipeIngredients}/>)
+    setCurrentComponent(<RecipeIngredientsForm buildRecipe={buildRecipe}/>)
   }
   else if (recipeStep === 3) {
-    setCurrentComponent(<RecipeInstructionsForm/>)
+    setCurrentComponent(<RecipeInstructionsForm
+    buildRecipe={buildRecipe}/>)
+  }
+  else if (recipeStep === 4) {
+    setCurrentComponent(<RecipeReview recipe={recipe}/>)
   }
  }, [recipeStep]);
   
   const advanceStep = () => {
-    recipeStep < 5 && setRecipeStep(recipeStep + 1)
+    recipeStep <= 3 && setRecipeStep(recipeStep + 1)
   }  
 
   const decreaseStep = () => {
     recipeStep > 0 && setRecipeStep(recipeStep - 1)
   }
 
+  console.log('recipe', recipe)
+
   //make this more effieicnt? can these four functions be combined into one?
 
-  console.log('recipename', recipeName)
-  console.log('recipecategory', recipeCategory)
-  console.log('ingredients', recipeIngredients)
   return (
     <div className='add-food-container'>
       <div className='progress-container'>
@@ -77,7 +76,12 @@ export default function AddFood() {
         {currentComponent}
       </div>
       <div className='button-container'>
-        {recipeStep > 0 && <button className='next-button' onClick={decreaseStep}>Back</button> }
+        {recipeStep > 0 && 
+          <button 
+          className='next-button' 
+          onClick={decreaseStep}>Back
+          </button> 
+        }
         <button className='next-button' onClick={advanceStep}>Next</button>
       </div>
     </div>

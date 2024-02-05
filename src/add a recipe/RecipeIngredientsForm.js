@@ -1,8 +1,8 @@
-import './RecipeIngredientsForm.css'
+import './RecipeIngredientsForm.css';
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
-export default function RecipeIngredientsForm() {
+export default function RecipeIngredientsForm({ buildRecipe }) {
 
   const [input, setInput] = useState('')
   const [ingredients, setIngredients] = useState([])
@@ -16,8 +16,10 @@ export default function RecipeIngredientsForm() {
     setInput('')
   }
 
-   console.log(input)
-   console.log('ingredient', ingredients)
+  const sendIngredients = () => {
+    ingredients && buildRecipe('ingredients', ingredients)
+  }
+
   return (
     <div className='recipe-ingredients-form'>
       <p className='recipe-ingredient-prompt'>What goes in it?</p>
@@ -32,6 +34,7 @@ export default function RecipeIngredientsForm() {
           <p>{ingredient}</p>
         ))}
       </div>
+      <button onClick={sendIngredients}>done</button>
     </div>
   )
 }
