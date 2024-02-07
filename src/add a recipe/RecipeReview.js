@@ -6,7 +6,7 @@ export default function RecipeReview({recipe}) {
   return (
     <div className='recipe-review-form'>
       <p className='recipe-review-prompt'>Let's review it</p>
-      <p>Now that we've got all the details for this recipe, let's doubl;e check and make sure we've included all of the necessary information someone needs to cook it.</p>
+      <p>Now that we've got all the details for this recipe, let's double check and make sure we've included all of the necessary information someone needs to cook it.</p>
       <div className='recipe-name-review'>
         <p className='name'>Name</p>
         <p className='recipe-name'>{recipe.name}</p>

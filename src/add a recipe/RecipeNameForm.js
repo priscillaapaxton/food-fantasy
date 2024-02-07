@@ -2,8 +2,8 @@ import './RecipeNameForm.css'
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
-export default function RecipeNameForm({ buildRecipe }) {
-
+export default function RecipeNameForm({ buildRecipe, advanceStep }) {
+  
   const [input, setInput] = useState('')
 
   const handleInputChange = (e) => {
@@ -11,6 +11,8 @@ export default function RecipeNameForm({ buildRecipe }) {
   }
 
   const setName = () => {
+    input &&
+    advanceStep()
     buildRecipe('name', input)
   }
   //why does this look weird?? should I replace the 'name' with something better?
@@ -25,7 +27,7 @@ export default function RecipeNameForm({ buildRecipe }) {
       value={input}
       onChange={handleInputChange}
       ></input>
-      <button onClick={setName}>done with name</button>
+      <button onClick={setName}>save and continue</button>
     </div>
   )
 }

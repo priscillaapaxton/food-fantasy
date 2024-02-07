@@ -15,7 +15,7 @@
 }
 
 .current-component-container {
-  border: solid black 1px;
-  height: 300px;
+  border: solid orange 1px;
+  height: auto;
 }
 
