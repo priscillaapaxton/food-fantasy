@@ -13,7 +13,7 @@ export default function HotBar({setOption}) {
 
   return (
     <div className='hot-bar-container'>
-      <div className={`option ${selectedOption === 'search' ? 'selected' : ''}`} id='search' onClick={giveSelection}>Search For Content</div>
+      <div className={`option ${selectedOption === 'search' ? 'selected' : ''}`} id='search' onClick={giveSelection}>Search</div>
       <div className={`option ${selectedOption === 'browse' ? 'selected' : ''}`} id='browse' onClick={giveSelection}>Browse Content</div>
       <div className={`option ${selectedOption === 'create' ? 'selected' : ''}`} id='create' onClick={giveSelection}>Create Content</div>
       <div className={`option ${selectedOption === 'user' ? 'selected' : ''}`} id='user' onClick={giveSelection}>User Nav</div>

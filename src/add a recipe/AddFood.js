@@ -61,20 +61,72 @@ export default function AddFood() {
     recipe={recipe}/>
   }
 
+  // height .651 width .692
+
   return (
     <div className='add-food-container'>
       <div className='progress-container'>
-        {recipeStep > 0 && <button onClick={decreaseStep}>BACK</button>}
-        <div className='step' id='one' style={{ backgroundColor: recipeStep >= 0 ? 'red' : ''}}></div>
-        <div className='step' id='two' style={{ backgroundColor: recipeStep >= 1 ? 'red' : ''}}></div>
-        <div className='step' id='three' style={{ backgroundColor: recipeStep >= 2 ? 'red' : ''}}></div>
-        <div className='step' id='four' style={{ backgroundColor: recipeStep >= 3 ? 'red' : ''}}></div>
-        <div className='step' id='five' style={{ backgroundColor: recipeStep >= 4 ? 'red' : ''}}></div>
+        <div className='back-button-container'>
+          <img 
+            className='back-button' 
+            src={recipeStep > 0 ? '/backButton.png' : ''}
+            onClick={decreaseStep} 
+          />  
+        </div>
+        <div className='progress-bar-container'>
+            <img className='progress-bar' src={
+              recipeStep === 0 ? '/progressBarZero.png' :
+              recipeStep === 1 ? '/progressBarOne.png' :
+              recipeStep === 2 ? '/progressBarTwo.png' :
+              recipeStep === 3 ? '/progressBarThree.png' :
+              recipeStep === 4 ? '/progressBarFour.png' :
+              ''
+            }/> 
+          </div>
       </div>
-      <p className='add-a-recipe'>ADD A RECIPE</p>
+      <div className='add-a-recipe-container'>
+        <p className='add-a-recipe'>ADD A RECIPE</p>
+      </div>
       <div className='current-component-container'>
         {currentComponent}
       </div>
+    </div>
+  )
+}
+
+
+{/* <img className='progress-bar' src={
+            recipeStep === 0 ? '/progressBarZero.png' :
+            recipeStep === 1 ? '/progressBarOne.png' :
+            recipeStep === 2 ? '/progressBarTwo.png' :
+            recipeStep === 3 ? '/progressBarThree.png' :
+            recipeStep === 4 ? '/progressBarFour.png' :
+            ''
+          }/>  */}
+        {/* <div className='progress-bar-container'>
+          <img className='progress-bar' src={
+            recipeStep === 0 ? '/progressBarZero.png' :
+            recipeStep === 1 ? '/progressBarOne.png' :
+            recipeStep === 2 ? '/progressBarTwo.png' :
+            recipeStep === 3 ? '/progressBarThree.png' :
+            recipeStep === 4 ? '/progressBarFour.png' :
+            ''
+          }/> 
+        </div>   */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* <div className='button-container'>
         {recipeStep > 0 && 
           <button 
@@ -84,6 +136,10 @@ export default function AddFood() {
         }
         <button className='next-button' onClick={advanceStep}>Next</button>
       </div> */}
-    </div>
-  )
-}
+
+
+  {/* <div className='step' id='one' style={{ backgroundColor: recipeStep >= 0 ? 'red' : ''}}></div>
+  <div className='step' id='two' style={{ backgroundColor: recipeStep >= 1 ? 'red' : ''}}></div>
+  <div className='step' id='three' style={{ backgroundColor: recipeStep >= 2 ? 'red' : ''}}></div>
+  <div className='step' id='four' style={{ backgroundColor: recipeStep >= 3 ? 'red' : ''}}></div>
+  <div className='step' id='five' style={{ backgroundColor: recipeStep >= 4 ? 'red' : ''}}></div> */}
