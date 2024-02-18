@@ -6,28 +6,29 @@
   align-items: center;
 }
 
-/* background-color: #FFF8F1; */
-
-
 .recipe-name-prompt {
-  font-size: 26px;
-  font-weight: bold;
-}
+  font-size: 29px;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-weight: 800;
+} 
 
 .recipe-name-text {
-  font-size: 13px;
+  font-size: 15px;
   color: #2D3126;
   text-align: center;
+  width: 250px;
 }
 
-.recipe-name-container {
-  width: 100%;
+.input-container {
+  width: 247px;
 }
 
 .recipe-name {
   text-align: start;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: bold;
+  margin-bottom: 3px;
   color: #5A4CFF
 }
 
@@ -38,12 +39,23 @@
   border-radius: 25px;
 }
 
-.button-container {
-  height: 45%;
+.clear-container {
+  height: 19%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9px;
+  color: #5A4CFF;
+  text-decoration: underline;
 }
 
-.continue-button {
-  margin-top: 27px;
+.button-container {
+  display: flex;
+  align-items: flex-start;
+  height: 21%;
+}
+
+.name-continue-button {
   width: 247px;
   height: 31px;
   border-radius: 32px;

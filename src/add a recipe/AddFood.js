@@ -13,7 +13,7 @@ export default function AddFood() {
 
   const [recipe, setRecipe] = useState({
     name: '',
-    category: '',
+    category: [],
     ingredients: [],
     instructions: [],
   })
