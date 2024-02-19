@@ -10,12 +10,7 @@ import Widgets from './widgets';
 import View from './View';
 
 import AddFood from './add a recipe/AddFood';
-import AddFood from './AddFood';
 import Browse from './Browse';
-import FavoriteIngredients from './FavoriteIngredients';
-import Trending from './Trending';
-import FavoriteRecipes from './Browse';
-import RecipeSearch from './RecipeSearch';
 import InputSearch from './IngredientSearch';
 
 import { ingredients, recipes, combos } from './Data';

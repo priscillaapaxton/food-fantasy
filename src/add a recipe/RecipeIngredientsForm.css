@@ -1,23 +1,78 @@
 .recipe-ingredients-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: dotted yellow 3px;
 }
 
 .recipe-ingredient-prompt {
-  text-align: center;
   font-size: 29px;
+  margin-top: 0px;
+  margin-bottom: 0px; 
   font-weight: 800;
 }
 
+.recipe-name-text {
+  font-size: 13px;
+  color: #6C6D63;
+  font-weight: 275;
+
+}
+
 .add-ingredient-form-container {
-  width: 248px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 247px;
+  height: 35%;
+  border: solid purple 1px;
+
 }
 
 .individual-ingredient {
   border: solid blue 1px;
 }
 
-.recipe-name-input {
-  height: 78px;
+.ingredient-count {
+  text-align: start;
+  font-size: 9px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  color: #5A4CFF
+}
+
+.ingredient-input-container {
+  width: 247px;
+}
+
+.recipe-ingredient-input {
+  width: 100%;
+  height: 31px;
+  border: #2D3126 solid 1px;
+  border-radius: 25px;
+}
+
+.ingredient-dropdown-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop-down {
+  width: 121px;
+  height: 31px;
+  border-radius: 25px;
+}
+
+.ingredient-notes-container {
+
+}
+
+.ingredient-notes {
+  width: 100%;
+  height: 31px;
+  border: #2D3126 solid 1px;
+  border-radius: 25px;
 }

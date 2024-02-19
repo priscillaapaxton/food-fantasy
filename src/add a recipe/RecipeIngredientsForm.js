@@ -27,7 +27,7 @@ export default function RecipeIngredientsForm({ advanceStep, buildRecipe }) {
   return (
     <div className='recipe-ingredients-form'>
       <p className='recipe-ingredient-prompt'>What goes in it?</p>
-      <p className='recipe-name-text'>SOMETHING HERE, ok that's great! Now let's add the ingredients and the amounts.</p>
+      <p className='recipe-name-text'>Now let's add the ingredients, their amounts, and any special instructions they have.</p>
       <div className='ingredient-container'>
         {ingredients.map((ingredient) => (
           <div className='individual-ingredient'>
@@ -36,13 +36,27 @@ export default function RecipeIngredientsForm({ advanceStep, buildRecipe }) {
         ))}
       </div>
       <div className='add-ingredient-form-container'>
-        <p className='ingredient-count'>Ingredient {ingredients.length + 1}</p>
-        <input 
-        className='recipe-name-input'
-        value={input}
-        onChange={handleInputChange}></input>
-        <div className='button-container'>
-          <button onClick={addIngredients}>Add ingredient</button>
+
+        <div className='ingredient-input-container'>
+          <p className='ingredient-count'>Ingredient {ingredients.length + 1}</p>
+          <input 
+          className='recipe-ingredient-input'
+          value={input}
+          onChange={handleInputChange}></input>
+        </div>
+
+        <div className='ingredient-dropdown-container'>
+          <select 
+          className='drop-down'
+          id='quantity'/>
+          <select
+          className='drop-down' 
+          id='measurement'/>
+        </div>
+
+        <div className='ingredient-notes-container'>
+          <input 
+          className='ingredient-notes'></input>
         </div>
       </div>
       <button onClick={sendIngredients}>Save and Continue</button>
