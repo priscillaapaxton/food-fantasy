@@ -1,0 +1,16 @@
+.app-container{
+  border: solid black 1px;
+  width: 270px;
+  height: 550px;
+  background-color: #FFF8F1;
+
+}
+
+.component-container {
+  height: 89%;
+  overflow: scroll;
+}
+
+.hotbar-container {
+  height: 11%;
+}

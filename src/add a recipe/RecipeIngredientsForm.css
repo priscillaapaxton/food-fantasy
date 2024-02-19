@@ -1,0 +1,23 @@
+.recipe-ingredients-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recipe-ingredient-prompt {
+  text-align: center;
+  font-size: 29px;
+  font-weight: 800;
+}
+
+.add-ingredient-form-container {
+  width: 248px;
+}
+
+.individual-ingredient {
+  border: solid blue 1px;
+}
+
+.recipe-name-input {
+  height: 78px;
+}

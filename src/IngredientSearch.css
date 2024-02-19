@@ -1,11 +1,14 @@
-.input-container {
+.search-component-container {
   border: black solid 1px;
   display: flex;
   justify-content: center;
 }
 
-.ingredient-search-display {
+.ingredient-input-display {
   border: red solid 1px;
   width: 300px;
 }
 
+.search-container {
+  display: flex;
+}

@@ -1,0 +1,52 @@
+.add-food-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  height: 15%;
+}
+
+.back-button-container {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  height: 10px;
+
+}
+
+.progress-bar-container {
+  display: flex;
+  width:80%;
+  height: 15px;
+  align-items: center;
+}
+
+.back-button {
+  height: 13px;
+}
+
+.progress-bar {
+  height: 100%;
+}
+
+.add-a-recipe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-a-recipe {
+  font-size: 9px;
+  font-weight: 550;
+  color: #FF5C2B;
+  letter-spacing: 2px;
+}
+
+.current-component-container {
+  height: 100%;
+}
+

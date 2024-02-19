@@ -159,8 +159,6 @@ export const recipes = [
   { recipeName: 'Cherry Tomato Bruschetta', ingredients: ['Cherry tomatoes', 'Basil', 'Garlic', 'Balsamic glaze', 'Baguette', 'Olive oil'], cookTime: '15 minutes' },
 ];
 
-
-
 export const combos = [
   { combinationId: 1, ingredients: ['Tomatoes', 'Mozzarella', 'Basil', 'Olive oil', 'Balsamic vinegar'] },
   { combinationId: 2, ingredients: ['Chicken', 'Lemon', 'Garlic', 'Thyme', 'Olive oil'] },

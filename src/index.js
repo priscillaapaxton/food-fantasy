@@ -1,12 +1,15 @@
-import React from 'react';
+import './index.css';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
-import './index.css';
-import Main from './Main';
 import reportWebVitals from './reportWebVitals';
 
+import Main from './Main';
 import Widgets from './widgets';
 
+import View from './View';
+
+import AddFood from './add a recipe/AddFood';
 import AddFood from './AddFood';
 import Browse from './Browse';
 import FavoriteIngredients from './FavoriteIngredients';
@@ -18,6 +21,7 @@ import InputSearch from './IngredientSearch';
 import { ingredients, recipes, combos } from './Data';
 //test
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,24 +29,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <><Widgets /><InputSearch /></>
+        element: <View />
       },
-      {
-        path: '/AddFood',
-        element: <AddFood />,
-      },
-      {
-        path: '/Browse',
-        element: <Browse recipes={recipes}/>,
-      },
-      // {
-      //   path: '/Trending',
-      //   element: <Trending />
-      // },
-      // {
-      //   path: '/FavoriteRecipes',
-      //   element: <FavoriteRecipes recipes={recipes}/>
-      // }
     ]
   }
 ])
