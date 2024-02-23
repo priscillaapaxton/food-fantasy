@@ -74,8 +74,6 @@
   /* margin-top: 0px;
   margin-bottom: 3px; */
   color: #6C6D63;
-  /* border: rgb(42, 44, 66) dotted 1.5px; */
-
 }
 
 .ingredient-info {
@@ -146,7 +144,7 @@
   font-size: 9px;
   width: 50%;
   text-decoration: underline;
-  color: #5A4CFF;;
+  color: #5A4CFF;
 }
 
 .add {
