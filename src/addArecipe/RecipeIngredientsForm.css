@@ -1,27 +1,29 @@
-.recipe-directions-form {
+.recipe-ingredients-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
 
-.recipe-directions-prompt {
+.recipe-ingredient-prompt {
   font-size: 29px;
   margin-top: 0px;
   margin-bottom: 0px; 
   font-weight: 800;
-  text-align: center;
-} 
-
-.recipe-directions-text {
-  font-size: 15px;
-  color: #6C6D63;
-  text-align: center;
-  width: 250px;
 }
 
-.instruction-container {
-  width: 241px;
+.recipe-name-text {
+  font-size: 13px;
+  color: #6C6D63;
+  font-weight: 275;
+}
+
+.ingredient-container {
+  /* width: 247px; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: yellow solid 2px; */
 }
 
 .single {
@@ -56,11 +58,16 @@
   align-items: center;
 }
 
-.instructions-detail-container {
+.ingredient-details-container {
   width: 231px;
 }
 
-.instruction-counter {
+.remove-button {
+  /* width: 10px; */
+  height: 10px;
+}
+
+.ingredient-counter {
   text-align: start;
   font-size: 9px;
   font-weight: bold;
@@ -69,52 +76,90 @@
   color: #6C6D63;
 }
 
-.remove-button {
-  /* width: 10px; */
-  height: 10px;
+.ingredient-info {
+  font-size: 10px;
+  /* border: rgb(65, 45, 65) dotted 1.5px; */
 }
 
-.instruction-input-counter {
+.add-ingredient-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.ingredient-input-count {
   text-align: start;
   font-size: 9px;
   font-weight: bold;
+  margin-top: 0px;
   margin-bottom: 3px;
   color: #5A4CFF
 }
 
-.recipe-direction-input {
+.ingredient-input-container {
   width: 241px;
-  height: 78px;
+}
+
+.recipe-ingredient-input {
+  width: 100%;
+  height: 31px;
+  color: #6C6D63;
+  border: #2D3126 solid 1px;
+  border-radius: 25px;
+  padding: 0 26px;
+}
+
+.ingredient-dropdown-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop-down {
+  width: 121px;
+  height: 31px;
+  border-radius: 25px;
+  padding: 0 48px;
+
+}
+
+.ingredient-notes-container {
+  /* width: 241px; */
+}
+
+.ingredient-notes {
+  width: 100%;
+  height: 31px;
   border: #2D3126 solid 1px;
   border-radius: 25px;
 }
 
-.instructions-button-control {
+.button-control {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.add-instruction {
+.add, .clear {
   font-size: 9px;
   width: 50%;
   text-decoration: underline;
   color: #5A4CFF;
+}
+
+.add {
   text-align: end;
   margin-right: 5px;
 }
 
-.clear-instruction {
-  font-size: 9px;
-  width: 50%;
-  text-decoration: underline;
-  color: #5A4CFF;
+.clear{
   text-align: start;
   margin-left: 5px;
 }
 
-.instruction-continue-button {
+.ingredient-continue-button {
   width: 247px;
   height: 31px;
   border-radius: 32px;

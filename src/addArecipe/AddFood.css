@@ -7,22 +7,25 @@
 .progress-container {
   display: flex;
   align-items: center;
-  height: 15%;
+  height: 98px;
 }
 
 .back-button-container {
   display: flex;
   align-items: center;
-  width: 20%;
+  flex: 1 1 100%;
   height: 10px;
 
 }
 
 .progress-bar-container {
   display: flex;
-  width:80%;
-  height: 15px;
+  flex: 1 1 180px;
+  height: 12px;
+  width: 100%;
+  min-width: 180px;
   align-items: center;
+  justify-content: center;
 }
 
 .back-button {
