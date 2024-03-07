@@ -1,14 +1,15 @@
 import './RecipeCategoryForm.css'
-import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
 export default function RecipeCategoryForm({ buildRecipe, advanceStep }) {
 
   const [selected, setSelected] = useState([])
 
-  const setCategory = (e) => {
-    buildRecipe('category', selected)
-    advanceStep()
+  const setCategory = () => {
+    if (selected.length > 0) {
+      advanceStep()
+      buildRecipe('category', selected)
+    }
   }
 
   const activateButton = (e) => {
@@ -79,12 +80,12 @@ export default function RecipeCategoryForm({ buildRecipe, advanceStep }) {
           onClick={activateButton}
           >TEST2</div>
         </div>
-        <div className='continue-button-container'>
-        <button 
-        className={selected.length ? 'category-continue-button-active' : 'category-continue-button-inactive'} 
-        onClick={setCategory}
-        >SAVE & CONTINUE</button>
       </div>
+      <div className='continue-button-container'>
+      <button 
+      className={selected.length ? 'category-continue-button-active' : 'category-continue-button-inactive'} 
+      onClick={setCategory}
+      >SAVE & CONTINUE</button>
       </div>
       
     </div>

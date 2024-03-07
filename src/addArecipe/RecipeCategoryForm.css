@@ -1,5 +1,5 @@
 .recipe-category-form {
-  height: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,31 +7,30 @@
 }
 
 .recipe-category-prompt {
-  height: 10%;
-  font-size: 29px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  font-weight: 800;
   text-align: center;
-  width: 200px;
+  width: 350px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .recipe-category-text {
-  height: 10%;
-  font-size: 13px;
-  color: #2D3126;
+  font-size: 20px;
+  color: #6C6D63;
   text-align: center;
-  width: 225px;
+  width: 300px;
 }
 
-.button-container {
+/* .button-container {
   width: 247px;
   height: 70%;
   display: flex;
   flex-direction: column;
-}
+} */
 
 .button-options-container {
+  width: 358px;
   display: grid;
   grid-template-columns: repeat(2, 5fr);
   /* grid-template-rows: repeat(5, 1fr); */
@@ -45,10 +44,10 @@
   align-items: center;
   border: solid black 1.5px;
   border-radius: 32px;
-  height: 31px;
-  width: 115px;
+  height: 48px;
+  width: 175px;
   margin-top: 8px;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: bold;
   color: #5A4CFF;
 }
@@ -59,23 +58,19 @@
   align-items: center;
   border: solid black 1.5px;
   border-radius: 32px;
-  height: 31px;
-  width: 115px;
+  height: 48px;
+  width: 175px;
   margin-top: 8px;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: bold;
   color: red;
 }
 
-/* .button-container {
-  height: 45%;
-} */
-
 .category-continue-button-inactive {
-  margin-top: 27px;
-  width: 247px;
-  height: 31px;
+  width: 358px;
+  height: 48px;
   border-radius: 32px;
+  margin-top: 40px;
   border: none;
   font-size: 14px;
   color: #FFF8F1;
@@ -84,10 +79,10 @@
 }
 
 .category-continue-button-active {
-  margin-top: 27px;
-  width: 247px;
-  height: 31px;
+  width: 358px;
+  height: 48px;
   border-radius: 32px;
+  margin-top: 40px;
   border: none;
   font-size: 14px;
   color: #FFF8F1;

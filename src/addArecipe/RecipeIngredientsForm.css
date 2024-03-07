@@ -2,32 +2,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
 }
 
 .recipe-ingredient-prompt {
-  font-size: 29px;
+  text-align: center;
+  width: 350px;
   margin-top: 0px;
-  margin-bottom: 0px; 
-  font-weight: 800;
+  margin-bottom: 0px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .recipe-name-text {
-  font-size: 13px;
+  font-size: 20px;
   color: #6C6D63;
-  font-weight: 275;
+  text-align: center;
 }
 
 .ingredient-container {
-  /* width: 247px; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border: yellow solid 2px; */
+  width: 100%;
 }
 
 .single {
-  height: 62px;
+  height: 98px;
   border-top: black solid 1.5px;
   border-bottom: black solid 1.5px;
   display: flex;
@@ -35,7 +32,7 @@
 }
 
 .first {
-  height: 62px;
+  height: 98px;
   border-top: black solid 1.5px;
   border-bottom: black solid .75px;
   display: flex;
@@ -43,7 +40,7 @@
 }
 
 .last {
-  height: 62px;
+  height: 98px;
   border-top: black solid .75px;
   border-bottom: black solid 1.5px;
   display: flex;
@@ -51,7 +48,7 @@
 }
 
 .others {
-  height: 62px;
+  height: 98px;
   border-top: black solid .75px;
   border-bottom: black solid .75px;
   display: flex;
@@ -59,51 +56,44 @@
 }
 
 .ingredient-details-container {
-  width: 231px;
+  width: 90%;
 }
 
 .remove-button {
-  /* width: 10px; */
-  height: 10px;
+  height: 16px;
 }
 
 .ingredient-counter {
   text-align: start;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: bold;
-  /* margin-top: 0px;
-  margin-bottom: 3px; */
   color: #6C6D63;
 }
 
 .ingredient-info {
-  font-size: 10px;
-  /* border: rgb(65, 45, 65) dotted 1.5px; */
+  font-size: 14px;
 }
 
 .add-ingredient-form-container {
+  width: 100%;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 16px;
 }
 
 .ingredient-input-count {
   text-align: start;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 3px;
   color: #5A4CFF
 }
 
-.ingredient-input-container {
-  width: 241px;
-}
-
 .recipe-ingredient-input {
   width: 100%;
-  height: 31px;
+  height: 48px;
   color: #6C6D63;
   border: #2D3126 solid 1px;
   border-radius: 25px;
@@ -117,20 +107,19 @@
 }
 
 .drop-down {
-  width: 121px;
-  height: 31px;
+  width: 175px;
+  height: 48px;
   border-radius: 25px;
   padding: 0 48px;
-
 }
 
-.ingredient-notes-container {
-  /* width: 241px; */
+option {
+  font-size: 14px;;
 }
 
 .ingredient-notes {
   width: 100%;
-  height: 31px;
+  height: 48px;
   border: #2D3126 solid 1px;
   border-radius: 25px;
 }
@@ -143,7 +132,7 @@
 }
 
 .add, .clear {
-  font-size: 9px;
+  font-size: 14px;
   width: 50%;
   text-decoration: underline;
   color: #5A4CFF;
@@ -160,12 +149,25 @@
 }
 
 .ingredient-continue-button {
-  width: 247px;
-  height: 31px;
+  width: 358px;
+  height: 48px;
   border-radius: 32px;
+  margin-top: 40px;
   border: none;
   font-size: 14px;
   color: #FFF8F1;
   font-weight: 550;
-  background-color: #5A4CFF;
+  background-color: #9492F2;
+}
+
+.ingredient-continue-button-active {
+  width: 358px;
+  height: 48px;
+  border-radius: 32px;
+  margin-top: 40px;
+  border: none;
+  font-size: 14px;
+  color: #FFF8F1;
+  font-weight: 550;
+  background-color: #5A4CFF
 }

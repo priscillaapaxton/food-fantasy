@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   height: 98px;
+  /* margin-bottom: 24px; */
 }
 
 .back-button-container {
@@ -15,7 +16,6 @@
   align-items: center;
   flex: 1 1 100%;
   height: 10px;
-
 }
 
 .progress-bar-container {
@@ -43,10 +43,11 @@
 }
 
 .add-a-recipe {
-  font-size: 9px;
-  font-weight: 550;
+  font-size: 19px;
+  /* font-weight: 550; */
   color: #FF5C2B;
   letter-spacing: 2px;
+  margin-top: 0px;
 }
 
 .current-component-container {

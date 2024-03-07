@@ -1,5 +1,4 @@
 import './RecipeInstructionsForm.css'
-import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
 export default function RecipeInstructionsForm ({ advanceStep, buildRecipe }) {
@@ -45,25 +44,23 @@ export default function RecipeInstructionsForm ({ advanceStep, buildRecipe }) {
             <img 
             className='remove-button' 
             src='/remove.png' 
+            alt='remove'
             />
             </div>
             ))}
           </div>
-
           <div className='instruction-input-container'>
             <p className='instruction-input-counter'>Step {instructions.length + 1}</p>
             <input 
             className='recipe-direction-input'
             value={input}
             onChange={handleInputChange}></input>
-            <div className='instructions-button-control'>
-              <p className='add-instruction' onClick={addSteps}>add step</p>
-              <p className='clear-instruction' >clear</p>
-            </div>
           </div>
-          <div className='instruction-continue-button-container'>
-            <button className='instruction-continue-button' onClick={sendInstructions}>Save and Continue</button>
+          <div className='button-control'>
+            <p className='add-instruction' onClick={addSteps}>add step</p>
+                <p className='clear-instruction' >clear</p>
           </div>
+          <button className={instructions.length? 'instruction-continue-button-active' : 'instruction-continue-button'} onClick={sendInstructions}>Save and Continue</button>
     </div>
   )
 }

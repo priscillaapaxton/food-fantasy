@@ -1,10 +1,8 @@
-import './View.css'
 import React, { useState } from 'react';
-
+import './View.css'
 import HotBar from './HotBar';
-
 import InputSearch from './IngredientSearch';
-import AddFood from './add a recipe/AddFood';
+import AddFood from './addArecipe/AddFood.js';
 
 export default function View() {
 
