@@ -1,21 +1,10 @@
 import './index.css';
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-
 import Main from './Main';
-import Widgets from './widgets';
-
 import View from './View';
-
-import AddFood from './add a recipe/AddFood';
-import Browse from './Browse';
-import InputSearch from './IngredientSearch';
-
-import { ingredients, recipes, combos } from './Data';
-//test
-
 
 const router = createBrowserRouter([
   {

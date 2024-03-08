@@ -1,6 +1,5 @@
 import './AddFood.css';
-import { Link } from "react-router-dom";
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 
 import RecipeNameForm from './RecipeNameForm';
 import RecipeCategoryForm from './RecipeCategoryForm';
@@ -61,7 +60,6 @@ export default function AddFood() {
     recipe={recipe}/>
   }
 
-  // height .651 width .692
 
   return (
     <div className='add-food-container'>
@@ -69,16 +67,16 @@ export default function AddFood() {
         <div className='back-button-container'>
           <img 
             className='back-button' 
-            src={1 > 0 ? '/backButton.png' : ''}
+            src={recipeStep > 0 ? '/backButton.png' : ''}
             onClick={decreaseStep} 
           />  
         </div>
         <div className='progress-bar-container'>
             <img className='progress-bar' src={
               recipeStep === 0 ? '/progressBarZero.svg' :
-              recipeStep === 1 ? '/progressBarOne.png' :
-              recipeStep === 2 ? '/progressBarTwo.png' :
-              recipeStep === 3 ? '/progressBarThree.png' :
+              recipeStep === 1 ? '/progressBarOne.svg' :
+              recipeStep === 2 ? '/progressBarTwo.svg' :
+              recipeStep === 3 ? '/progressBarThree.svg' :
               recipeStep === 4 ? '/progressBarFour.png' :
               ''
             }/> 

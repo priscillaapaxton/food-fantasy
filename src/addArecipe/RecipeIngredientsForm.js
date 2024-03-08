@@ -1,5 +1,4 @@
 import './RecipeIngredientsForm.css';
-import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
 export default function RecipeIngredientsForm({ advanceStep, buildRecipe }) {
@@ -58,17 +57,16 @@ export default function RecipeIngredientsForm({ advanceStep, buildRecipe }) {
   }
 
   const sendIngredients = () => {
-    ingredients && 
-    advanceStep()
-    buildRecipe('ingredients', ingredients)
+    if (ingredients.length > 0) {
+      advanceStep()
+      buildRecipe('ingredients', ingredients)
+    } 
   }
 
-  
   return (
     <div className='recipe-ingredients-form'>
       <p className='recipe-ingredient-prompt'>What goes in it?</p>
       <p className='recipe-name-text'>Now let's add the ingredients, their amounts, and any special instructions they have.</p>
-
       <div className='ingredient-container'>
         {ingredients.map((ingredient, index) => (
           <div
@@ -92,9 +90,7 @@ export default function RecipeIngredientsForm({ advanceStep, buildRecipe }) {
           </div>
         ))}
       </div>
-
       <div className='add-ingredient-form-container'>
-
         <div className='ingredient-input-container'>
           <p className='ingredient-input-count'>Ingredient {ingredients.length + 1}</p>
           <input 
@@ -104,7 +100,6 @@ export default function RecipeIngredientsForm({ advanceStep, buildRecipe }) {
           onClick={click}
           onChange={handleInputChange}></input>
         </div>
-
         <div className='ingredient-dropdown-container'>
           <select 
           className='drop-down'
@@ -129,7 +124,6 @@ export default function RecipeIngredientsForm({ advanceStep, buildRecipe }) {
             <option value='gram'>gram</option>
           </select>
         </div>
-
         <div className='ingredient-notes-container'>
           <input 
           className='ingredient-notes'
@@ -142,10 +136,9 @@ export default function RecipeIngredientsForm({ advanceStep, buildRecipe }) {
         <p className='add' onClick={addIngredients}>add ingredient</p>
         <p className='clear' onClick={clear}>clear</p>
       </div>
-      
       <button 
       onClick={sendIngredients}
-      className='ingredient-continue-button'
+      className={ingredients.length ? 'ingredient-continue-button-active' : 'ingredient-continue-button'}
       >Save and Continue</button>
     </div>
   )
